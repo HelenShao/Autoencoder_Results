@@ -8,7 +8,7 @@ import torch.optim as optim
 import torch.nn.functional as F
 from torchvision import transforms, utils, datasets
 from torch.utils.data import Dataset, DataLoader, random_split, SubsetRandomSampler
-import data, mean_std, corr_coef, denormalize, make_plots
+import data, corr_coef, denormalize, make_plots
 
 ####################################### INPUT #########################################
 # Data parameters

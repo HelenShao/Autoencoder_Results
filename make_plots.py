@@ -50,8 +50,6 @@ def make_plots(denorm_input, denorm_output, fname):
     plt.show()
 
 #################################### MAKE 11 PANELS FOR EACH MODEL ###################################
-
-#################################### MAKE 11 PANELS FOR EACH MODEL ###################################
 import corr_coef
 
 def make_panels(denorm_input, denorm_output):

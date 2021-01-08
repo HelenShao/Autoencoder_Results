@@ -51,6 +51,9 @@ def make_plots(denorm_input, denorm_output, fname):
 
 #################################### MAKE 11 PANELS FOR EACH MODEL ###################################
 
+#################################### MAKE 11 PANELS FOR EACH MODEL ###################################
+import corr_coef
+
 def make_panels(denorm_input, denorm_output):
     property_name = ["m_vir", "v_max", "v_rms", "Halo Radius", "Scale Radius", 
                      "Velocity", "Angular momentum", "Spin", "b_to_a",
@@ -60,7 +63,7 @@ def make_panels(denorm_input, denorm_output):
     columns = 2
     fig = plt.figure(figsize=(44, 44))
     
-    ax = fig.add_subplot(1,1,1)
+    """ax = fig.add_subplot(1,1,1)
     ax.spines['top'].set_color('none')
     ax.spines['bottom'].set_color('none')
     ax.spines['left'].set_color('none')
@@ -72,7 +75,7 @@ def make_panels(denorm_input, denorm_output):
     ax.set_ylabel('Predicted')
     
     # Title
-    fig.suptitle('Autoencoder: Predicted vs True Halo Properties')
+    fig.suptitle('Autoencoder: Predicted vs True Halo Properties')"""
     
     for j in range(9):
         k = j*11
@@ -104,7 +107,7 @@ def make_panels(denorm_input, denorm_output):
                     plt.xscale('log')
 
                 if i == 0:
-                    plt.ylabel("Predicted: Bottleneck %d"%(j+1), fontsize = 12)
+                    plt.ylabel("Predicted: Bottleneck %d"%(j+2), fontsize = 12)
         
         if j == 8:
             for i in range(n_plots):
@@ -133,7 +136,7 @@ def make_panels(denorm_input, denorm_output):
                     plt.xscale('log')
 
                 if i == 0:
-                    plt.ylabel("Predicted: Bottleneck %d"%(j+1), fontsize = 12)
+                    plt.ylabel("Predicted: Bottleneck %d"%(j+2), fontsize = 12)
             
-    plt.savefig("test_plot_big")
+    plt.savefig("all_models_panels")
     return fig

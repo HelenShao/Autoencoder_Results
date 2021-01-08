@@ -8,7 +8,7 @@ import torch.optim as optim
 import torch.nn.functional as F
 from torchvision import transforms, utils, datasets
 from torch.utils.data import Dataset, DataLoader, random_split, SubsetRandomSampler
-import data, mean_std, corr_coef, denormalize
+import data, mean_std, corr_coef, denormalize, make_plots
 
 ####################################### INPUT #########################################
 # Data parameters
@@ -61,3 +61,8 @@ np.save("denorm_output.npy", denorm_output)
 # Each halo has 11 properties
 
 # denorm_output[1][1] --> the 2nd halo prediction (bottleneck 3) and the first halo (it has 11 properties)
+
+# Make the panels for all 9 models
+denorm_input  = np.load("denorm_input.npy")
+denorm_output = np.load("denorm_output.npy")
+make_plots.make_panels_all(denorm_input, denorm_output)

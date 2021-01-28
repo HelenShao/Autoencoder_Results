@@ -9,3 +9,4 @@ Important Features:
 2. Scatterplots with r_squared  - used to compare the true vs reproductions and compute the accuracy wrt y=x line
 3. Latent Space Mappings  - used to visualize how the input features are organized in the bottleneck space
 4. PCA vs Autoencoder Scatterplots - to determine how well each method performs relative to each other
+5. Transporting data  - how to print the input, bottleneck, and output (reproduction) of the best trained model and contain these data in single numpy file for future analysis.
